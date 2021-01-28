@@ -76,6 +76,7 @@ spec:
       containers:
         - name: {{ include "team-nextcloud.fullname" . }}-redis
           image: redis:alpine
+          args: ["--requirepass", "tn", "--masterauth", "tn"]
           imagePullPolicy: Always
           ports:
             - containerPort: 6379

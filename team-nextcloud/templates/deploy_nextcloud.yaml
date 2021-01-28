@@ -42,6 +42,8 @@ spec:
          env:
           - name: REDIS_HOST
             value: {{ include "team-nextcloud.fullname" . }}-redis
+          - name: REDIS_HOST_PASSWORD
+            value: "tn"
           - name: MYSQL_HOST
             value: {{ include "team-nextcloud.fullname" . }}-db
           - name: NEXTCLOUD_TRUSTED_DOMAINS
